@@ -1,0 +1,10 @@
+const {Router} = require('express');
+const {studentsController} = require('../controllers/students.controller.js');
+const router = Router();
+router.get('/getStudents', studentsController.getStudents);
+router.post('/addStudent', studentsController.addStudent);
+router.get('/getAllNotesByStudent/:student_id', studentsController.getAllNotesByStudent);
+router.get('/getStudentsPayTrue', studentsController.getStudentsPayTrue);
+router.get('/getStudentsPayFalse', studentsController.getStudentsPayFalse);
+router.get('/getStudentsPayMidle', studentsController.getStudentsPayMidle);
+module.exports = router;
